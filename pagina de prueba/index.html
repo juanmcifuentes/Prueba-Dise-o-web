@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Demo de un menu desplegable(DropDown)" usando jquery />
+<meta name="keywords" content="jquery, ajax, menu, desplegable, dropdown" />
+<title>DropDown Menu desplegable</title>
+<script language="javascript" src="jquery-1.3.min.js"></script>
+<script type="text/javascript">
+function mainmenu(){
+$(" #nav ul ").css({display: "none"});
+$(" #nav li").hover(function(){
+	$(this).find('ul:first:hidden').css({visibility: "visible",display: "none"}).slideDown(400);
+	},function(){
+		$(this).find('ul:first').slideUp(400);
+	});
+}
+$(document).ready(function(){
+	mainmenu();
+});
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body,td,th {
+	color: #CCCCCC;
+}
+-->
+</style></head>
+<body>
+<div id="menu">
+<ul id="nav">
+	<li><a href="#">Inicio</a></li>
+<li><a href="#">Registrar</a>
+    	<ul class="submenu">        
+            <li><a href="#">Registrar usuarios</a></li>
+          <li><a href="#">Registrar ventas</a></li>
+              <li><a href="#">Registrar productos</a></li>
+                 <li><a href="#">Registrar factura</a></li>
+                    <li><a href="#">Cargar imagenes</a></li>
+                      
+        </ul>
+    </li>
+    <li><a href="#">Consultar</a>
+    	<ul class="submenu">
+            <li><a href="#">Solicitudes</a></li> 
+            <li><a href="#">Reportes</a>
+            	<ul class="subsubmenu">
+                	<li><a href="#">Reporte de ventas</a></li>
+                    <li><a href="#">Reporte de inventario</a></li>        
+              </ul>
+          <li><a href="#">Listado de usuarios</a>
+          <li><a href="#">Inventario</a>
+          <li><a href="#">Ventas</a>
+           
+        </ul>
+    </li>
+    <li><a href="#">Galeria</a></li>
+    <li><a href="#">Ayuda</a></li>
+     
+          
+</ul>
+</div>
+<br />
+<p align="center"><a href="http://www.miguelmanchego.com/2009/dropdown-menu-desplegable-ajax-jquery/" title="blog miguel manchego">Regresar al blog</a></p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+<p align="center">&nbsp;</p>
+</body>
+</html>
